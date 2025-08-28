@@ -1,3 +1,7 @@
+
+
+
+
 1. API Programming Language
   Tool: JAVA 8
   Justification: Java has a mature, well-documented ecosystem with a wide range of libraries and tools that simplify API creation and maintenance
@@ -29,3 +33,11 @@ Justification: Git enables efficient version control and collaboration, while Gi
 Tool: Swagger & JUnit 5
 
 Justification: Swagger is a powerful and easy-to-use testing framework for java api, with strong community support and plugins for coverage, fixtures, and mocking.
+
+6. API Framework
+
+Tool: RESTful API
+
+Justification: Simple, stateless communication REST APIs are great for CRUD (Create, Read, Update, Delete) operations using HTTP methods (GET, POST, PUT, DELETE).
+              Web-friendly architecture. If your API is being accessed via browsers or HTTP clients, REST integrates naturally with standard web protocols. Ease of use and wide support REST is supported in virtually all modern programming languages, frameworks, and                    tools. Scalability statelessness (each request contains all info needed) supports scaling out with ease. Resource-based modeling REST is excellent when your application has clear "resources" (e.g., users, products, orders).
+
