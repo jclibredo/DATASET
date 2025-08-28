@@ -1,0 +1,39 @@
+create or replace TABLE DRG_DB.DRG_SCHEMA.DRG_ADMISSION (
+	ID NUMBER(38,0) autoincrement start 1 increment 1 noorder,
+	PDX VARCHAR(10),
+	SDX VARCHAR(500),
+	PROC VARCHAR(500),
+	AGE VARCHAR(3),
+	ADMISSIONDATE VARCHAR(20),
+	DISCHARGEDATE VARCHAR(20),
+	GENDER VARCHAR(1),
+	TIMEADMISSION VARCHAR(20),
+	TIMEDISCHARGE VARCHAR(20),
+	DISCHARGETYPE VARCHAR(20),
+	ADMISSIONWEIGHT VARCHAR(5),
+	ACCRENO VARCHAR(25)
+);
+/
+create or replace TABLE DRG_DB.DRG_SCHEMA.FACILITY (
+	ID NUMBER(38,0) autoincrement start 1 increment 1 noorder,
+	"accreno" VARCHAR(20),
+	"hospitalname" VARCHAR(100),
+	"regioncode" VARCHAR(20),
+	"created_date" TIMESTAMP_NTZ(9) DEFAULT CURRENT_DATE()
+);
+/
+create or replace TABLE DRG_DB.DRG_SCHEMA.ICD10CM (
+	ID NUMBER(38,0) autoincrement start 1 increment 1 noorder,
+	CODE VARCHAR(20),
+	DETAILS VARCHAR(2000),
+	CREATED_DATE TIMESTAMP_NTZ(9) DEFAULT CURRENT_DATE()
+);
+/
+create or replace TABLE DRG_DB.DRG_SCHEMA.REGION (
+	ID NUMBER(38,0) autoincrement start 1 increment 1 noorder,
+	"regioncode" VARCHAR(100),
+	"reg_name" VARCHAR(100),
+	"created_date" TIMESTAMP_NTZ(9) DEFAULT CURRENT_DATE()
+);
+/
+
