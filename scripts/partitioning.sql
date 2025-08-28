@@ -1,0 +1,20 @@
+
+--CREATE TABLE WITH PATION FOR LARGE DATASETS 
+use minosun;
+CREATE TABLE sales (
+    id INT NOT NULL,
+    sale_date DATE NOT NULL,
+    amount DECIMAL(10, 2)
+)
+PARTITION BY RANGE (YEAR(sale_date)) (
+    PARTITION p0 VALUES LESS THAN (2020),
+    PARTITION p1 VALUES LESS THAN (2021),
+    PARTITION p2 VALUES LESS THAN (2022),
+    PARTITION p3 VALUES LESS THAN MAXVALUE
+);
+
+-- SELECT PARTITION FROM sales table
+SELECT amount,sale_date FROM minosun.sales PARTITION(p0,p1,p2,p3) WHERE sale_date > (str_to_date('01-01-2019','%m-%d-%Y'));
+
+-- SHOW PARTIONS FROM sales
+SHOW CREATE TABLE sales;
